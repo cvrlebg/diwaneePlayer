@@ -1,0 +1,25 @@
+{
+  "name": "diwanee-video",
+  "version": "1.0.0",
+  "authors": [
+    "Milos Markovic <milos.markovic@diwanee.com>"
+  ],
+  "description": "Diwanee HTML5 video player",
+  "main": "index.html",
+  "keywords": [
+    "html5",
+    "video",
+    "player",
+    "diwanee"
+  ],
+  "ignore": [
+    "bower_components",
+    "devLibs",
+    "vjs.config.js"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "video.js": "4.12.11",
+    "video.js-vast": "https://github.com/cvrlebg/videojs-vast-plugin.git#a90d91bb50b30630462b7bc98a705ea00d99028c"
+  }
+}

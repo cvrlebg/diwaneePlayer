@@ -1,0 +1,23 @@
+{
+  "name": "videojs-vast-plugin-diwanee",
+  "version": "0.2.1",
+  "homepage": "https://github.com/cvrlebg/videojs-vast-plugin",
+  "description": "A VAST plugin for VideoJS",
+  "main": "videojs.vast.js",
+  "keywords": [
+    "videojs",
+    "video",
+    "vast",
+    "ads"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "spec",
+    "Gruntfile.js"
+  ]
+}

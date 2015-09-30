@@ -1,0 +1,15 @@
+.container {
+  position: relative;
+  overflow: hidden;
+  width: 980px;
+  margin: 0 auto;
+}
+
+.holder {
+  position: relative;
+  width: 450px;
+  overflow: hidden;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  float: left;
+}
