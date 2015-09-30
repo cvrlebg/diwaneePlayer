@@ -13,9 +13,7 @@
     "diwanee"
   ],
   "ignore": [
-    "bower_components",
-    "devLibs",
-    "vjs.config.js"
+    "bower_components"
   ],
   "license": "MIT",
   "dependencies": {
