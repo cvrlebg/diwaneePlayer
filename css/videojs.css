@@ -494,9 +494,9 @@ easily in the skin designer. http://designer.videojs.com/
   display: none;
 }
 /* Hide when video starts playing */
-.vjs-default-skin.vjs-has-started .vjs-big-play-button {
+/*.vjs-default-skin.vjs-has-started .vjs-big-play-button {
   display: none;
-}
+}*/
 /* Hide on mobile devices. Remove when we stop using native controls
     by default on mobile  */
 .vjs-default-skin.vjs-using-native-controls .vjs-big-play-button {

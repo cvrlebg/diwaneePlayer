@@ -66,8 +66,8 @@
       player.vast({
         url: settings.vastUrl + oxParms,
         skip: 5,
-        remainTxt: 'تخطي الإعلان في %d',
-        skipTxt: 'تخطي الإعل'
+        remainTxt: settings.remainTxt,
+        skipTxt: settings.skipTxt
       });
     }
 
@@ -148,7 +148,7 @@
     });
 
     player.on('pause', function () {
-      //console.log('pause');
+      console.log('pause');
       player.bigPlayButton.show();
       if (!player.seeking()) {
         player.controlBar.hide();
