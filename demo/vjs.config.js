@@ -4,7 +4,9 @@ $(function () {
     var video = o;
     videojs(video).ready(function() {
       var player = this;
-      var options = {};
+      var options = {
+        vastUrl: 'http://ox-d.clickmena.com/v/1.0/av?auid=537209182'
+      };
 
       kalturaSrc.partnerId = 676152;
       kalturaSrc.getSource(player.el());

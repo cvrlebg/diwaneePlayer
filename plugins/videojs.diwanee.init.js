@@ -27,6 +27,7 @@
 
     var settings = extend({}, defaults, options || {});
     var player = this;
+    var className = player.el_.classList[0];
 
     // due to buggy  behavior  fullscreenApi disabled on Android Tablets in Chrome
     if ($('html').hasClass('ua-visitor-device-tablet') && $('html').hasClass('ua-os-name-android') && $('html').hasClass('ua-browser-name-chrome')) {
@@ -49,7 +50,7 @@
       player.diwaneeGa();
     }
 
-    player.muted(false);
+    player.muted(true);
     player.usingNativeControls(false);
 
     //VAST
@@ -63,8 +64,10 @@
       });
 
       player.vast({
-        url: vastUrl + oxParms,
-        skip: 5
+        url: settings.vastUrl + oxParms,
+        skip: 5,
+        remainTxt: 'تخطي الإعلان في %d',
+        skipTxt: 'تخطي الإعل'
       });
     }
 
@@ -73,7 +76,7 @@
       player.setPreload('auto');
       var vWidth = player.width();
     } else {
-      var vWidth = $('.dvjs_video').width();
+      var vWidth = $('.' + className).width();
     }
     var vHeight = (9 * parseInt(vWidth)) / 16;
     player.height(Math.round(vHeight));
