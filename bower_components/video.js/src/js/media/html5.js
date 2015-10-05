@@ -59,10 +59,6 @@ vjs.Html5 = vjs.MediaTechController.extend({
       }
     }
 
-    if (this['featuresNativeTextTracks']) {
-      this.on('loadstart', vjs.bind(this, this.hideCaptions));
-    }
-
     // Determine if native controls should be used
     // Our goal should be to get the custom controls on mobile solid everywhere
     // so we can remove this all together. Right now this will block custom
@@ -163,25 +159,6 @@ vjs.Html5.prototype.createEl = function(){
 
   return el;
   // jenniisawesome = true;
-};
-
-
-vjs.Html5.prototype.hideCaptions = function() {
-  var tracks = this.el_.querySelectorAll('track'),
-      track,
-      i = tracks.length,
-      kinds = {
-        'captions': 1,
-        'subtitles': 1
-      };
-
-  while (i--) {
-    track = tracks[i].track;
-    if ((track && track['kind'] in kinds) &&
-        (!tracks[i]['default'])) {
-      track.mode = 'disabled';
-    }
-  }
 };
 
 // Make video events trigger player events
@@ -426,25 +403,6 @@ vjs.Html5.prototype.addRemoteTextTrack = function(options) {
   }
 
   this.el().appendChild(track);
-
-  if (track.track['kind'] === 'metadata') {
-    track['track']['mode'] = 'hidden';
-  } else {
-    track['track']['mode'] = 'disabled';
-  }
-
-  track['onload'] = function() {
-    var tt = track['track'];
-    if (track.readyState >= 2) {
-      if (tt['kind'] === 'metadata' && tt['mode'] !== 'hidden') {
-        tt['mode'] = 'hidden';
-      } else if (tt['kind'] !== 'metadata' && tt['mode'] !== 'disabled') {
-        tt['mode'] = 'disabled';
-      }
-      track['onload'] = null;
-    }
-  };
-
   this.remoteTextTracks().addTrack_(track.track);
 
   return track;
@@ -517,14 +475,14 @@ vjs.MediaTechController.withSourceHandlers(vjs.Html5);
  * @param  {Object} source   The source object
  * @param  {vjs.Html5} tech  The instance of the HTML5 tech
  */
-vjs.Html5.nativeSourceHandler = {};
+vjs.Html5['nativeSourceHandler'] = {};
 
 /**
  * Check if the video element can handle the source natively
  * @param  {Object} source  The source object
  * @return {String}         'probably', 'maybe', or '' (empty string)
  */
-vjs.Html5.nativeSourceHandler.canHandleSource = function(source){
+vjs.Html5['nativeSourceHandler']['canHandleSource'] = function(source){
   var match, ext;
 
   function canPlayType(type){
@@ -558,7 +516,7 @@ vjs.Html5.nativeSourceHandler.canHandleSource = function(source){
  * @param  {Object} source    The source object
  * @param  {vjs.Html5} tech   The instance of the Html5 tech
  */
-vjs.Html5.nativeSourceHandler.handleSource = function(source, tech){
+vjs.Html5['nativeSourceHandler']['handleSource'] = function(source, tech){
   tech.setSrc(source.src);
 };
 
@@ -566,10 +524,10 @@ vjs.Html5.nativeSourceHandler.handleSource = function(source, tech){
  * Clean up the source handler when disposing the player or switching sources..
  * (no cleanup is needed when supporting the format natively)
  */
-vjs.Html5.nativeSourceHandler.dispose = function(){};
+vjs.Html5['nativeSourceHandler']['dispose'] = function(){};
 
 // Register the native source handler
-vjs.Html5.registerSourceHandler(vjs.Html5.nativeSourceHandler);
+vjs.Html5['registerSourceHandler'](vjs.Html5['nativeSourceHandler']);
 
 /**
  * Check if the volume can be changed in this browser/device.

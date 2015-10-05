@@ -28,8 +28,9 @@
 
 
     // playing / ending main video
-    player.on("contentplayback", function(e) {
-      if (e.triggerevent === "playing" || e.triggerevent === "adscanceled") {        
+    player.on("play", function(e) {
+      console.log(e);
+      if (e.type === "content-playback" || e.triggerevent === "adscanceled") {
         procentBeaconEnabled = true;
         if (!player.paused()) {
           player.trigger('ga-start');
@@ -42,17 +43,19 @@
           });
         }
       }
-      if (e.triggerevent === "ended") {
+      if (e.type === "ended") {
+        console.log('ga-ended');
         _gaq.push(['_trackEvent', eventName, 'ended', eventLabel]);
       }
     });
 
 
     // play / stop
-    var ended = false; // fix for replay seak
+    var ended = false; // fix for replay seek
     
     player.on('play', function() {
       if (!player.seeking() || ended) {
+        console.log('play-ga');
         ended = false;
         player.trigger('ga-play');
         _gaq.push(['_trackEvent', eventName, 'play', eventLabel]);

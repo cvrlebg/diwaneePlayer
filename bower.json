@@ -17,7 +17,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "video.js": "4.12.11",
-    "video.js-vast": "https://github.com/cvrlebg/videojs-vast-plugin.git#85710ab16d43620f86ddc6fbf5ec9cb8339225fc"
+    "video.js": "4.12.15",
+    "video.js-vast": "https://github.com/cvrlebg/videojs-vast-plugin.git#bf2e2cf9407445d11952afb40fd36ccbf8aff0d5"
   }
 }

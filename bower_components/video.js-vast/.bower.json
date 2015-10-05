@@ -19,12 +19,12 @@
     "spec",
     "Gruntfile.js"
   ],
-  "_release": "85710ab16d",
+  "_release": "bf2e2cf940",
   "_resolution": {
     "type": "commit",
-    "commit": "85710ab16d43620f86ddc6fbf5ec9cb8339225fc"
+    "commit": "bf2e2cf9407445d11952afb40fd36ccbf8aff0d5"
   },
   "_source": "https://github.com/cvrlebg/videojs-vast-plugin.git",
-  "_target": "85710ab16d43620f86ddc6fbf5ec9cb8339225fc",
+  "_target": "bf2e2cf9407445d11952afb40fd36ccbf8aff0d5",
   "_originalSource": "https://github.com/cvrlebg/videojs-vast-plugin.git"
 }

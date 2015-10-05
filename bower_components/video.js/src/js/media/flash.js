@@ -101,6 +101,10 @@ vjs.Flash.prototype.dispose = function(){
 };
 
 vjs.Flash.prototype.play = function(){
+  if (this.ended()) {
+    this['setCurrentTime'](0);
+  }
+
   this.el_.vjs_play();
 };
 
@@ -239,14 +243,14 @@ vjs.MediaTechController.withSourceHandlers(vjs.Flash);
  * @param  {Object} source   The source object
  * @param  {vjs.Flash} tech  The instance of the Flash tech
  */
-vjs.Flash.nativeSourceHandler = {};
+vjs.Flash['nativeSourceHandler'] = {};
 
 /**
  * Check Flash can handle the source natively
  * @param  {Object} source  The source object
  * @return {String}         'probably', 'maybe', or '' (empty string)
  */
-vjs.Flash.nativeSourceHandler.canHandleSource = function(source){
+vjs.Flash['nativeSourceHandler']['canHandleSource'] = function(source){
   var type;
 
   if (!source.type) {
@@ -270,7 +274,7 @@ vjs.Flash.nativeSourceHandler.canHandleSource = function(source){
  * @param  {Object} source    The source object
  * @param  {vjs.Flash} tech   The instance of the Flash tech
  */
-vjs.Flash.nativeSourceHandler.handleSource = function(source, tech){
+vjs.Flash['nativeSourceHandler']['handleSource'] = function(source, tech){
   tech.setSrc(source.src);
 };
 
@@ -278,10 +282,10 @@ vjs.Flash.nativeSourceHandler.handleSource = function(source, tech){
  * Clean up the source handler when disposing the player or switching sources..
  * (no cleanup is needed when supporting the format natively)
  */
-vjs.Flash.nativeSourceHandler.dispose = function(){};
+vjs.Flash['nativeSourceHandler']['dispose'] = function(){};
 
 // Register the native source handler
-vjs.Flash.registerSourceHandler(vjs.Flash.nativeSourceHandler);
+vjs.Flash['registerSourceHandler'](vjs.Flash['nativeSourceHandler']);
 
 vjs.Flash.formats = {
   'video/flv': 'FLV',

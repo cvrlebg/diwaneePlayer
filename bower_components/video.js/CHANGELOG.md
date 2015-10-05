@@ -6,6 +6,21 @@ _(none)_
 
 --------------------
 
+## 4.12.15 (2015-08-31)
+* @dmlap update to videojs-swf 4.7.4 ([view](https://github.com/videojs/video.js/pull/2463))
+* @bc-bbay migrate seeking on replay to the flash tech ([view](https://github.com/videojs/video.js/pull/2519))
+* Updated to v4.7.5 of the swf ([view](https://github.com/videojs/video.js/pull/2531))
+
+## 4.12.14 (2015-08-21)
+* @gkatsev removed non-default track auto-disabling ([view](https://github.com/videojs/video.js/pull/2468))
+
+## 4.12.13 (2015-08-10)
+* @dmlap update to videojs-swf v4.7.3 ([view](https://github.com/videojs/video.js/pull/2457))
+
+## 4.12.12 (2015-07-23)
+* @imbcmdth updated source handlers to use bracket notation so they wont break when using minified videojs ([view](https://github.com/videojs/video.js/pull/2348))
+* @imbcmdth fix potential triggerReady infinite loop ([view](https://github.com/videojs/video.js/pull/2398))
+
 ## 4.12.11 (2015-07-09)
 * @saxena-gaurav updated swf to 4.7.2 to fix flash of previous video frame ([view](https://github.com/videojs/video.js/pull/2300))
 * @gkatsev updated the vtt.js version to fix JSON issues ([view](https://github.com/videojs/video.js/pull/2327))

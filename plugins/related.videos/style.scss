@@ -1,4 +1,13 @@
 // RELATED VIDEOS VJS
+
+@mixin prefixed($name, $argument) {
+  -webkit-#{$name}: #{$argument};
+  -moz-#{$name}: #{$argument};
+  -ms-#{$name}: #{$argument};
+  -o-#{$name}: #{$argument};
+  #{$name}: #{$argument};
+}
+
 .video-js .vjs-related-wrap {
   position: absolute;
   opacity: 0;
@@ -29,7 +38,7 @@
         span {
           font-weight: bold;
           color: #9e914c;
-          font-family: $font-family-kufi;
+          //font-family: $font-family-kufi;
           // background: url(/assets/images/video-ico-related.png) no-repeat right center;
           // padding-right: 24px;
         }
@@ -63,7 +72,7 @@
           color: white;
           overflow: hidden;
           h6 {
-            font-family: $font-family-naskh;
+            //font-family: $font-family-naskh;
           }
         }
       }
@@ -81,7 +90,7 @@
     padding: 7px 20px 7px 50px;
     width: auto;
     height: auto;
-    font-family: $font-family-naskh;
+    //font-family: $font-family-naskh;
     font-size: 15px;
     line-height: normal;
     color: white;

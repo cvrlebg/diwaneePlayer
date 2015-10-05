@@ -314,9 +314,6 @@
           fsm = {
             'content-set': {
               events: {
-                'adscanceled': function() {
-                  this.state = 'content-playback';
-                },
                 'adsready': function() {
                   this.state = 'ads-ready';
                 },
@@ -369,6 +366,7 @@
                 },
                 'adtimeout': function() {
                   this.state = 'content-playback';
+                  player.trigger('content-playback');
                   player.play();
                 }
               }
@@ -387,13 +385,6 @@
               events: {
                 'play': function() {
                   cancelContentPlay(player);
-                },
-                'adscanceled': function() {
-                  this.state = 'content-playback';
-
-                  clearImmediate(player.ads.cancelPlayTimeout);
-                  player.ads.cancelPlayTimeout = null;
-                  player.play();
                 },
                 'adsready': function() {
                   this.state = 'preroll?';
@@ -436,6 +427,7 @@
               events: {
                 'adend': function() {
                   this.state = 'content-playback';
+                  player.trigger('content-playback');
                 }
               }
             },
@@ -487,7 +479,6 @@
         'contentupdate',
         // events emitted by third party ad implementors
         'adsready',
-        'adscanceled',
         'adstart',  // startLinearAdMode()
         'adend'     // endLinearAdMode()
       ]), fsmHandler);

@@ -58,18 +58,18 @@
     var custVars = ox_vars.setVars();
     var oxParms = custVars !== '' ? '/' + custVars : '';
 
-    if(settings.vastUrl != '') {
+    //if(settings.vastUrl != '') {
       player.ads({
         debug: true
       });
-
+console.log(settings.vastUrl + oxParms);
       player.vast({
         url: settings.vastUrl + oxParms,
         skip: 5,
         remainTxt: settings.remainTxt,
         skipTxt: settings.skipTxt
       });
-    }
+    //}
 
     if ((/MSIE 9/).test(navigator.userAgent)) {
       player.width('100%');
