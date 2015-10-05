@@ -29,8 +29,8 @@
 
     // playing / ending main video
     player.on("play", function(e) {
-      console.log(e);
-      if (e.type === "content-playback" || e.triggerevent === "adscanceled") {
+      if (player.ads.state === "content-resuming" || player.ads.state === "content-playback") {
+        //console.log(player.ads);
         procentBeaconEnabled = true;
         if (!player.paused()) {
           player.trigger('ga-start');
@@ -43,17 +43,12 @@
           });
         }
       }
+
       if (e.type === "ended") {
         console.log('ga-ended');
         _gaq.push(['_trackEvent', eventName, 'ended', eventLabel]);
       }
-    });
 
-
-    // play / stop
-    var ended = false; // fix for replay seek
-    
-    player.on('play', function() {
       if (!player.seeking() || ended) {
         console.log('play-ga');
         ended = false;
@@ -61,6 +56,15 @@
         _gaq.push(['_trackEvent', eventName, 'play', eventLabel]);
       }
     });
+
+
+    // play / stop
+    var ended = false; // fix for replay seek
+    
+    /*player.on('play', function() {
+
+     });*/
+
     player.on('pause', function() {
       if (!player.seeking()) {
         player.trigger('ga-pause');

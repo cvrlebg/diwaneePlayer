@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <title>Diwanee HTML5 player</title>
   <link rel="stylesheet" href="/css/videojs.css">
-  <link rel="stylesheet" href="/bower_components/video.js-vast/videojs.vast.css">
-  <link rel="stylesheet" href="/bower_components/video.js-vast/lib/videojs-contrib-ads/videojs.ads.css">
+  <link rel="stylesheet" href="/bower_components/diwanee-vjs-vast/videojs.vast.css">
+  <link rel="stylesheet" href="/bower_components/videojs-contrib-ads/src/videojs.ads.css">
   <link rel="stylesheet" href="/plugins/related.videos/style.css">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -36,8 +36,8 @@
   <script>
     var _gaq = _gaq || {};
     _gaq = {
-      push: function() {
-        console.log('push');
+      push: function(args) {
+        console.log(args);
       }
     }
   </script>
@@ -47,10 +47,10 @@
   <script src="/libs/kaltura/kWidget.getSources.js"></script>
   <script src="/libs/kaltura/kaltura.sources.js"></script>
 
-  <script src="/bower_components/video.js/dist/video-js/video.dev.js"></script>
-  <script src="/bower_components/video.js-vast/lib/vast-client.js"></script>
-  <script src="/bower_components/video.js-vast/lib/videojs-contrib-ads/videojs.ads.js"></script>
-  <script src="/bower_components/video.js-vast/videojs.vast.js"></script>
+  <script src="/bower_components/video.js/dist/video-js/video.js"></script>
+  <script src="/bower_components/vast-client-js/vast-client.js"></script>
+  <script src="/bower_components/videojs-contrib-ads/src/videojs.ads.js"></script>
+  <script src="/bower_components/diwanee-vjs-vast/videojs.vast.js"></script>
   <script src="/libs/base64/base64.min.js"></script>
 
   <script src="/libs/vast/vast.vars.js"></script>

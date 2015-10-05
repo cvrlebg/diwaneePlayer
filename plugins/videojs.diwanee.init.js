@@ -27,7 +27,8 @@
 
     var settings = extend({}, defaults, options || {});
     var player = this;
-    var className = player.el_.classList[0];
+    var classes = player.el().className.split(/\s+/);
+    var className = classes[0];
 
     // due to buggy  behavior  fullscreenApi disabled on Android Tablets in Chrome
     if ($('html').hasClass('ua-visitor-device-tablet') && $('html').hasClass('ua-os-name-android') && $('html').hasClass('ua-browser-name-chrome')) {
@@ -59,16 +60,16 @@
     var oxParms = custVars !== '' ? '/' + custVars : '';
 
     //if(settings.vastUrl != '') {
-      player.ads({
-        debug: true
-      });
-console.log(settings.vastUrl + oxParms);
-      player.vast({
-        url: settings.vastUrl + oxParms,
-        skip: 5,
-        remainTxt: settings.remainTxt,
-        skipTxt: settings.skipTxt
-      });
+    player.ads({
+      debug: true
+    });
+
+    player.vast({
+      url: settings.vastUrl + oxParms,
+      skip: 5,
+      remainTxt: settings.remainTxt,
+      skipTxt: settings.skipTxt
+    });
     //}
 
     if ((/MSIE 9/).test(navigator.userAgent)) {
@@ -119,11 +120,11 @@ console.log(settings.vastUrl + oxParms);
 
     // V A S T   R E A D Y   O R   E M P T Y
     player.one("vast-ready", function (e) {
-      autoplayHandler();
+      //autoplayHandler();
     });
     // no preroll scenario
     player.one('adscanceled', function (e) {
-      autoplayHandler();
+      //autoplayHandler();
     });
 
     player.on('play', function () {

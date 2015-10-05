@@ -6,6 +6,7 @@ $(function () {
       var player = this;
       var options = {
         //vastUrl: 'http://ox-d.clickmena.com/v/1.0/av?auid=537209182',
+        vastUrl: '',
         remainTxt: 'تخطي الإعلان في %d',
         skipTxt: 'تخطي الإعل'
       };
