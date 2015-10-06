@@ -52,7 +52,7 @@
           height: 100%;
           top: 0;
           left: 0;
-          background: url(/assets/images/desktop-video-play-btn.png) no-repeat center center;
+          background: url("../img/desktop-video-play-btn.png") no-repeat center center;
           -webkit-background-size: 30% auto;
           -moz-background-size: 30% auto;
           -ms-background-size: 30% auto;
@@ -82,7 +82,7 @@
   font-size: 15px;
   line-height: normal;
   color: white;
-  background: url(/assets/images/video-ico-play-small.png) no-repeat 10px center;
+  background: url("../img/video-ico-play-small.png") no-repeat 10px center;
   -webkit-background-size: 20px auto;
   -moz-background-size: 20px auto;
   -ms-background-size: 20px auto;

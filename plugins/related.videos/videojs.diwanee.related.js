@@ -51,12 +51,12 @@
     player.el().appendChild(relatedWrap);
 
     // Show / Hide
-    var showRelated = function () {
-    };
+    var showRelated = function () {};
     var hideRelated = function () {
       $(container).removeClass('related');
     };
     player.on('ga-start', function () {
+      //console.log('ga-start');
       showRelated = function () {
         console.log('show related');
         $(container).addClass('related');

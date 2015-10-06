@@ -1,5 +1,4 @@
 // RELATED VIDEOS VJS
-
 @mixin prefixed($name, $argument) {
   -webkit-#{$name}: #{$argument};
   -moz-#{$name}: #{$argument};
@@ -38,9 +37,6 @@
         span {
           font-weight: bold;
           color: #9e914c;
-          //font-family: $font-family-kufi;
-          // background: url(/assets/images/video-ico-related.png) no-repeat right center;
-          // padding-right: 24px;
         }
       }
       & > a {
@@ -62,7 +58,7 @@
             height: 100%;
             top: 0;
             left: 0;
-            background: url(/assets/images/desktop-video-play-btn.png) no-repeat center center;
+            background: url('../img/desktop-video-play-btn.png') no-repeat center center;
             @include prefixed(background-size, 30% auto);
           }
         }
@@ -71,9 +67,6 @@
           text-align: right;
           color: white;
           overflow: hidden;
-          h6 {
-            //font-family: $font-family-naskh;
-          }
         }
       }
     }
@@ -90,11 +83,10 @@
     padding: 7px 20px 7px 50px;
     width: auto;
     height: auto;
-    //font-family: $font-family-naskh;
     font-size: 15px;
     line-height: normal;
     color: white;
-    background: url(/assets/images/video-ico-play-small.png) no-repeat 10px center;
+    background: url('../img/video-ico-play-small.png') no-repeat 10px center;
     @include prefixed(background-size, 20px auto);
     white-space: nowrap;
     span {

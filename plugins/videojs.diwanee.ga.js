@@ -5,7 +5,8 @@
 
     var player = this;
     var video = this.el();
-    
+
+    var prerollStarted = false;
 
     var eventName = "Video";
     var eventLabel;
@@ -22,58 +23,61 @@
       else {
         player.one('play', function() {
           _gaq.push(['_trackEvent', eventName, 'startPreroll', eventLabel]);
+          prerollStarted = true;
         });
       }
     });
 
+    player.on('adend', function(e) {
+      _gaq.push(['_trackEvent', eventName, 'endPreroll', eventLabel]);
+    });
 
     // playing / ending main video
-    player.on("play", function(e) {
-      if (player.ads.state === "content-resuming" || player.ads.state === "content-playback") {
-        //console.log(player.ads);
-        procentBeaconEnabled = true;
-        if (!player.paused()) {
+    player.on("contentplay", function(e) {
+      //console.log(e);
+      procentBeaconEnabled = true;
+
+      if (!player.paused()) {
+        player.trigger('ga-start');
+        _gaq.push(['_trackEvent', eventName, 'start', eventLabel]);
+      }
+      else {
+        player.one('play', function() {
+          //console.log('content-play-one');
           player.trigger('ga-start');
-          _gaq.push(['_trackEvent', eventName, 'start', eventLabel]);          
-        }
-        else {
-          player.one('play', function() {
-            player.trigger('ga-start');
-            _gaq.push(['_trackEvent', eventName, 'start', eventLabel]);
-          });
-        }
+          _gaq.push(['_trackEvent', eventName, 'start', eventLabel]);
+        });
       }
 
-      if (e.type === "ended") {
-        console.log('ga-ended');
+      if (e.triggerevent === "ended") {
         _gaq.push(['_trackEvent', eventName, 'ended', eventLabel]);
-      }
-
-      if (!player.seeking() || ended) {
-        console.log('play-ga');
-        ended = false;
-        player.trigger('ga-play');
-        _gaq.push(['_trackEvent', eventName, 'play', eventLabel]);
       }
     });
 
 
     // play / stop
-    var ended = false; // fix for replay seek
-    
-    /*player.on('play', function() {
+    var ended = false; // fix for replay seak
 
-     });*/
-
-    player.on('pause', function() {
+    player.on('play', function(e) {
+      if (!player.seeking() || ended) {
+        //console.log(e);
+        ended = false;
+        player.trigger('ga-play');
+        if(!prerollStarted) {
+          _gaq.push(['_trackEvent', eventName, 'play', eventLabel]);
+        }
+      }
+    });
+    player.on('pause', function(e) {
       if (!player.seeking()) {
+        console.log(e);
         player.trigger('ga-pause');
         _gaq.push(['_trackEvent', eventName, 'pause', eventLabel]);
       }
-    });    
+    });
     player.on('ended', function() {
       ended = true;
-    });    
+    });
 
 
     // procentage 
@@ -92,9 +96,9 @@
       }
     });
 
-        
+
     // seek
-    var seek = false;    
+    var seek = false;
     player.on('seeking', function(e) {
       if (seek === false) {
         procentBeaconEnabled = false;
@@ -107,7 +111,7 @@
         _gaq.push(['_trackEvent', eventName, 'seek', eventLabel]);
       }
     });
-    
+
 
     // fullscreen
     player.on('fullscreenchange', function(e) {
@@ -115,7 +119,7 @@
         _gaq.push(['_trackEvent', eventName, 'fullscreen', eventLabel]);
       }
     });
-    
+
     // related
     $(".vjs-related-item", video).click(function(){
       _gaq.push(['_trackEvent', eventName, 'related-video-click', eventLabel]);

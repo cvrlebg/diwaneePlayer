@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<VAST version="2.0">
+    <Ad id="537209182">
+        <InLine>
+            <AdSystem version="1.0">OpenX Enterprise</AdSystem>
+
+            <AdTitle></AdTitle>
+            <Impression>
+                <![CDATA[http://ox-d.clickmena.com/v/1.0/ri?ts=1fHJpZD1kYmUyZDhhNi1lMGQwLTQ3MDEtYmI3Zi02MjM2NzkwOTA0Mjd8cnQ9MTQ0NDA0MjQ1NXxhdWlkPTUzNzIwOTE4MnxhdW09RE1JRC5MSU5FQVJWSURFT3xzaWQ9MTE2MDkzfHB1Yj0xMjU1MHxwYz1VU0R8cmFpZD1iZWY1ODdiMS0yODc5LTQ1MmEtOGFjMy1kMWY1NzAyNzIzNmJ8YWlkPTUzNzUxODY4N3x0PTN8YXM9NzIweDQwNnxsaWQ9NTM3MjgxMzI2fG9pZD01MzcxODQxMTl8cD0wfHByPTB8YXRiPTB8YWR2PTEyNjEyMHxhYz1VU0R8cG09UFJJQ0lORy5DUE18Ym09QlVZSU5HLk5PTkdVQVJBTlRFRUR8dXI9M1dZd2tRRmtXdg]]>
+            </Impression>
+            <Creatives>
+                <Creative id="537209182">
+                    <Linear>
+                        <Duration>00:00:16</Duration>
+                        <TrackingEvents>
+                            <Tracking event="creativeView">
+                                <![CDATA[http://ox-d.clickmena.com/v/1.0/rv?t=creativeView&ts=1fHJpZD1kYmUyZDhhNi1lMGQwLTQ3MDEtYmI3Zi02MjM2NzkwOTA0Mjd8cnQ9MTQ0NDA0MjQ1NXxhdWlkPTUzNzIwOTE4MnxhdW09RE1JRC5MSU5FQVJWSURFT3xzaWQ9MTE2MDkzfHB1Yj0xMjU1MHxwYz1VU0R8cmFpZD1iZWY1ODdiMS0yODc5LTQ1MmEtOGFjMy1kMWY1NzAyNzIzNmJ8YWlkPTUzNzUxODY4N3x0PTN8YXM9NzIweDQwNnxsaWQ9NTM3MjgxMzI2fG9pZD01MzcxODQxMTl8cD0wfHByPTB8YXRiPTB8YWR2PTEyNjEyMHxhYz1VU0R8cG09UFJJQ0lORy5DUE18Ym09QlVZSU5HLk5PTkdVQVJBTlRFRUR8dXI9M1dZd2tRRmtXdg]]>
+                            </Tracking>
+                            <Tracking event="start">
+                                <![CDATA[http://ox-d.clickmena.com/v/1.0/rv?t=start&ts=1fHJpZD1kYmUyZDhhNi1lMGQwLTQ3MDEtYmI3Zi02MjM2NzkwOTA0Mjd8cnQ9MTQ0NDA0MjQ1NXxhdWlkPTUzNzIwOTE4MnxhdW09RE1JRC5MSU5FQVJWSURFT3xzaWQ9MTE2MDkzfHB1Yj0xMjU1MHxwYz1VU0R8cmFpZD1iZWY1ODdiMS0yODc5LTQ1MmEtOGFjMy1kMWY1NzAyNzIzNmJ8YWlkPTUzNzUxODY4N3x0PTN8YXM9NzIweDQwNnxsaWQ9NTM3MjgxMzI2fG9pZD01MzcxODQxMTl8cD0wfHByPTB8YXRiPTB8YWR2PTEyNjEyMHxhYz1VU0R8cG09UFJJQ0lORy5DUE18Ym09QlVZSU5HLk5PTkdVQVJBTlRFRUR8dXI9M1dZd2tRRmtXdg]]>
+                            </Tracking>
+                            <Tracking event="midpoint">
+                                <![CDATA[http://ox-d.clickmena.com/v/1.0/rv?t=midpoint&ts=1fHJpZD1kYmUyZDhhNi1lMGQwLTQ3MDEtYmI3Zi02MjM2NzkwOTA0Mjd8cnQ9MTQ0NDA0MjQ1NXxhdWlkPTUzNzIwOTE4MnxhdW09RE1JRC5MSU5FQVJWSURFT3xzaWQ9MTE2MDkzfHB1Yj0xMjU1MHxwYz1VU0R8cmFpZD1iZWY1ODdiMS0yODc5LTQ1MmEtOGFjMy1kMWY1NzAyNzIzNmJ8YWlkPTUzNzUxODY4N3x0PTN8YXM9NzIweDQwNnxsaWQ9NTM3MjgxMzI2fG9pZD01MzcxODQxMTl8cD0wfHByPTB8YXRiPTB8YWR2PTEyNjEyMHxhYz1VU0R8cG09UFJJQ0lORy5DUE18Ym09QlVZSU5HLk5PTkdVQVJBTlRFRUR8dXI9M1dZd2tRRmtXdg]]>
+                            </Tracking>
+                            <Tracking event="firstQuartile">
+                                <![CDATA[http://ox-d.clickmena.com/v/1.0/rv?t=firstQuartile&ts=1fHJpZD1kYmUyZDhhNi1lMGQwLTQ3MDEtYmI3Zi02MjM2NzkwOTA0Mjd8cnQ9MTQ0NDA0MjQ1NXxhdWlkPTUzNzIwOTE4MnxhdW09RE1JRC5MSU5FQVJWSURFT3xzaWQ9MTE2MDkzfHB1Yj0xMjU1MHxwYz1VU0R8cmFpZD1iZWY1ODdiMS0yODc5LTQ1MmEtOGFjMy1kMWY1NzAyNzIzNmJ8YWlkPTUzNzUxODY4N3x0PTN8YXM9NzIweDQwNnxsaWQ9NTM3MjgxMzI2fG9pZD01MzcxODQxMTl8cD0wfHByPTB8YXRiPTB8YWR2PTEyNjEyMHxhYz1VU0R8cG09UFJJQ0lORy5DUE18Ym09QlVZSU5HLk5PTkdVQVJBTlRFRUR8dXI9M1dZd2tRRmtXdg]]>
+                            </Tracking>
+                            <Tracking event="thirdQuartile">
+                                <![CDATA[http://ox-d.clickmena.com/v/1.0/rv?t=thirdQuartile&ts=1fHJpZD1kYmUyZDhhNi1lMGQwLTQ3MDEtYmI3Zi02MjM2NzkwOTA0Mjd8cnQ9MTQ0NDA0MjQ1NXxhdWlkPTUzNzIwOTE4MnxhdW09RE1JRC5MSU5FQVJWSURFT3xzaWQ9MTE2MDkzfHB1Yj0xMjU1MHxwYz1VU0R8cmFpZD1iZWY1ODdiMS0yODc5LTQ1MmEtOGFjMy1kMWY1NzAyNzIzNmJ8YWlkPTUzNzUxODY4N3x0PTN8YXM9NzIweDQwNnxsaWQ9NTM3MjgxMzI2fG9pZD01MzcxODQxMTl8cD0wfHByPTB8YXRiPTB8YWR2PTEyNjEyMHxhYz1VU0R8cG09UFJJQ0lORy5DUE18Ym09QlVZSU5HLk5PTkdVQVJBTlRFRUR8dXI9M1dZd2tRRmtXdg]]>
+                            </Tracking>
+                            <Tracking event="complete">
+                                <![CDATA[http://ox-d.clickmena.com/v/1.0/rv?t=complete&ts=1fHJpZD1kYmUyZDhhNi1lMGQwLTQ3MDEtYmI3Zi02MjM2NzkwOTA0Mjd8cnQ9MTQ0NDA0MjQ1NXxhdWlkPTUzNzIwOTE4MnxhdW09RE1JRC5MSU5FQVJWSURFT3xzaWQ9MTE2MDkzfHB1Yj0xMjU1MHxwYz1VU0R8cmFpZD1iZWY1ODdiMS0yODc5LTQ1MmEtOGFjMy1kMWY1NzAyNzIzNmJ8YWlkPTUzNzUxODY4N3x0PTN8YXM9NzIweDQwNnxsaWQ9NTM3MjgxMzI2fG9pZD01MzcxODQxMTl8cD0wfHByPTB8YXRiPTB8YWR2PTEyNjEyMHxhYz1VU0R8cG09UFJJQ0lORy5DUE18Ym09QlVZSU5HLk5PTkdVQVJBTlRFRUR8dXI9M1dZd2tRRmtXdg]]>
+                            </Tracking>
+                            <Tracking event="mute">
+                                <![CDATA[http://ox-d.clickmena.com/v/1.0/rv?t=mute&ts=1fHJpZD1kYmUyZDhhNi1lMGQwLTQ3MDEtYmI3Zi02MjM2NzkwOTA0Mjd8cnQ9MTQ0NDA0MjQ1NXxhdWlkPTUzNzIwOTE4MnxhdW09RE1JRC5MSU5FQVJWSURFT3xzaWQ9MTE2MDkzfHB1Yj0xMjU1MHxwYz1VU0R8cmFpZD1iZWY1ODdiMS0yODc5LTQ1MmEtOGFjMy1kMWY1NzAyNzIzNmJ8YWlkPTUzNzUxODY4N3x0PTN8YXM9NzIweDQwNnxsaWQ9NTM3MjgxMzI2fG9pZD01MzcxODQxMTl8cD0wfHByPTB8YXRiPTB8YWR2PTEyNjEyMHxhYz1VU0R8cG09UFJJQ0lORy5DUE18Ym09QlVZSU5HLk5PTkdVQVJBTlRFRUR8dXI9M1dZd2tRRmtXdg]]>
+                            </Tracking>
+                            <Tracking event="unmute">
+                                <![CDATA[http://ox-d.clickmena.com/v/1.0/rv?t=unmute&ts=1fHJpZD1kYmUyZDhhNi1lMGQwLTQ3MDEtYmI3Zi02MjM2NzkwOTA0Mjd8cnQ9MTQ0NDA0MjQ1NXxhdWlkPTUzNzIwOTE4MnxhdW09RE1JRC5MSU5FQVJWSURFT3xzaWQ9MTE2MDkzfHB1Yj0xMjU1MHxwYz1VU0R8cmFpZD1iZWY1ODdiMS0yODc5LTQ1MmEtOGFjMy1kMWY1NzAyNzIzNmJ8YWlkPTUzNzUxODY4N3x0PTN8YXM9NzIweDQwNnxsaWQ9NTM3MjgxMzI2fG9pZD01MzcxODQxMTl8cD0wfHByPTB8YXRiPTB8YWR2PTEyNjEyMHxhYz1VU0R8cG09UFJJQ0lORy5DUE18Ym09QlVZSU5HLk5PTkdVQVJBTlRFRUR8dXI9M1dZd2tRRmtXdg]]>
+                            </Tracking>
+                            <Tracking event="pause">
+                                <![CDATA[http://ox-d.clickmena.com/v/1.0/rv?t=pause&ts=1fHJpZD1kYmUyZDhhNi1lMGQwLTQ3MDEtYmI3Zi02MjM2NzkwOTA0Mjd8cnQ9MTQ0NDA0MjQ1NXxhdWlkPTUzNzIwOTE4MnxhdW09RE1JRC5MSU5FQVJWSURFT3xzaWQ9MTE2MDkzfHB1Yj0xMjU1MHxwYz1VU0R8cmFpZD1iZWY1ODdiMS0yODc5LTQ1MmEtOGFjMy1kMWY1NzAyNzIzNmJ8YWlkPTUzNzUxODY4N3x0PTN8YXM9NzIweDQwNnxsaWQ9NTM3MjgxMzI2fG9pZD01MzcxODQxMTl8cD0wfHByPTB8YXRiPTB8YWR2PTEyNjEyMHxhYz1VU0R8cG09UFJJQ0lORy5DUE18Ym09QlVZSU5HLk5PTkdVQVJBTlRFRUR8dXI9M1dZd2tRRmtXdg]]>
+                            </Tracking>
+                            <Tracking event="rewind">
+                                <![CDATA[http://ox-d.clickmena.com/v/1.0/rv?t=rewind&ts=1fHJpZD1kYmUyZDhhNi1lMGQwLTQ3MDEtYmI3Zi02MjM2NzkwOTA0Mjd8cnQ9MTQ0NDA0MjQ1NXxhdWlkPTUzNzIwOTE4MnxhdW09RE1JRC5MSU5FQVJWSURFT3xzaWQ9MTE2MDkzfHB1Yj0xMjU1MHxwYz1VU0R8cmFpZD1iZWY1ODdiMS0yODc5LTQ1MmEtOGFjMy1kMWY1NzAyNzIzNmJ8YWlkPTUzNzUxODY4N3x0PTN8YXM9NzIweDQwNnxsaWQ9NTM3MjgxMzI2fG9pZD01MzcxODQxMTl8cD0wfHByPTB8YXRiPTB8YWR2PTEyNjEyMHxhYz1VU0R8cG09UFJJQ0lORy5DUE18Ym09QlVZSU5HLk5PTkdVQVJBTlRFRUR8dXI9M1dZd2tRRmtXdg]]>
+                            </Tracking>
+                            <Tracking event="resume">
+                                <![CDATA[http://ox-d.clickmena.com/v/1.0/rv?t=resume&ts=1fHJpZD1kYmUyZDhhNi1lMGQwLTQ3MDEtYmI3Zi02MjM2NzkwOTA0Mjd8cnQ9MTQ0NDA0MjQ1NXxhdWlkPTUzNzIwOTE4MnxhdW09RE1JRC5MSU5FQVJWSURFT3xzaWQ9MTE2MDkzfHB1Yj0xMjU1MHxwYz1VU0R8cmFpZD1iZWY1ODdiMS0yODc5LTQ1MmEtOGFjMy1kMWY1NzAyNzIzNmJ8YWlkPTUzNzUxODY4N3x0PTN8YXM9NzIweDQwNnxsaWQ9NTM3MjgxMzI2fG9pZD01MzcxODQxMTl8cD0wfHByPTB8YXRiPTB8YWR2PTEyNjEyMHxhYz1VU0R8cG09UFJJQ0lORy5DUE18Ym09QlVZSU5HLk5PTkdVQVJBTlRFRUR8dXI9M1dZd2tRRmtXdg]]>
+                            </Tracking>
+                            <Tracking event="fullscreen">
+                                <![CDATA[http://ox-d.clickmena.com/v/1.0/rv?t=fullscreen&ts=1fHJpZD1kYmUyZDhhNi1lMGQwLTQ3MDEtYmI3Zi02MjM2NzkwOTA0Mjd8cnQ9MTQ0NDA0MjQ1NXxhdWlkPTUzNzIwOTE4MnxhdW09RE1JRC5MSU5FQVJWSURFT3xzaWQ9MTE2MDkzfHB1Yj0xMjU1MHxwYz1VU0R8cmFpZD1iZWY1ODdiMS0yODc5LTQ1MmEtOGFjMy1kMWY1NzAyNzIzNmJ8YWlkPTUzNzUxODY4N3x0PTN8YXM9NzIweDQwNnxsaWQ9NTM3MjgxMzI2fG9pZD01MzcxODQxMTl8cD0wfHByPTB8YXRiPTB8YWR2PTEyNjEyMHxhYz1VU0R8cG09UFJJQ0lORy5DUE18Ym09QlVZSU5HLk5PTkdVQVJBTlRFRUR8dXI9M1dZd2tRRmtXdg]]>
+                            </Tracking>
+                            <Tracking event="expand">
+                                <![CDATA[http://ox-d.clickmena.com/v/1.0/rv?t=expand&ts=1fHJpZD1kYmUyZDhhNi1lMGQwLTQ3MDEtYmI3Zi02MjM2NzkwOTA0Mjd8cnQ9MTQ0NDA0MjQ1NXxhdWlkPTUzNzIwOTE4MnxhdW09RE1JRC5MSU5FQVJWSURFT3xzaWQ9MTE2MDkzfHB1Yj0xMjU1MHxwYz1VU0R8cmFpZD1iZWY1ODdiMS0yODc5LTQ1MmEtOGFjMy1kMWY1NzAyNzIzNmJ8YWlkPTUzNzUxODY4N3x0PTN8YXM9NzIweDQwNnxsaWQ9NTM3MjgxMzI2fG9pZD01MzcxODQxMTl8cD0wfHByPTB8YXRiPTB8YWR2PTEyNjEyMHxhYz1VU0R8cG09UFJJQ0lORy5DUE18Ym09QlVZSU5HLk5PTkdVQVJBTlRFRUR8dXI9M1dZd2tRRmtXdg]]>
+                            </Tracking>
+                            <Tracking event="collapse">
+                                <![CDATA[http://ox-d.clickmena.com/v/1.0/rv?t=collapse&ts=1fHJpZD1kYmUyZDhhNi1lMGQwLTQ3MDEtYmI3Zi02MjM2NzkwOTA0Mjd8cnQ9MTQ0NDA0MjQ1NXxhdWlkPTUzNzIwOTE4MnxhdW09RE1JRC5MSU5FQVJWSURFT3xzaWQ9MTE2MDkzfHB1Yj0xMjU1MHxwYz1VU0R8cmFpZD1iZWY1ODdiMS0yODc5LTQ1MmEtOGFjMy1kMWY1NzAyNzIzNmJ8YWlkPTUzNzUxODY4N3x0PTN8YXM9NzIweDQwNnxsaWQ9NTM3MjgxMzI2fG9pZD01MzcxODQxMTl8cD0wfHByPTB8YXRiPTB8YWR2PTEyNjEyMHxhYz1VU0R8cG09UFJJQ0lORy5DUE18Ym09QlVZSU5HLk5PTkdVQVJBTlRFRUR8dXI9M1dZd2tRRmtXdg]]>
+                            </Tracking>
+                            <Tracking event="acceptInvitation">
+                                <![CDATA[http://ox-d.clickmena.com/v/1.0/rv?t=acceptInvitation&ts=1fHJpZD1kYmUyZDhhNi1lMGQwLTQ3MDEtYmI3Zi02MjM2NzkwOTA0Mjd8cnQ9MTQ0NDA0MjQ1NXxhdWlkPTUzNzIwOTE4MnxhdW09RE1JRC5MSU5FQVJWSURFT3xzaWQ9MTE2MDkzfHB1Yj0xMjU1MHxwYz1VU0R8cmFpZD1iZWY1ODdiMS0yODc5LTQ1MmEtOGFjMy1kMWY1NzAyNzIzNmJ8YWlkPTUzNzUxODY4N3x0PTN8YXM9NzIweDQwNnxsaWQ9NTM3MjgxMzI2fG9pZD01MzcxODQxMTl8cD0wfHByPTB8YXRiPTB8YWR2PTEyNjEyMHxhYz1VU0R8cG09UFJJQ0lORy5DUE18Ym09QlVZSU5HLk5PTkdVQVJBTlRFRUR8dXI9M1dZd2tRRmtXdg]]>
+                            </Tracking>
+                            <Tracking event="close">
+                                <![CDATA[http://ox-d.clickmena.com/v/1.0/rv?t=close&ts=1fHJpZD1kYmUyZDhhNi1lMGQwLTQ3MDEtYmI3Zi02MjM2NzkwOTA0Mjd8cnQ9MTQ0NDA0MjQ1NXxhdWlkPTUzNzIwOTE4MnxhdW09RE1JRC5MSU5FQVJWSURFT3xzaWQ9MTE2MDkzfHB1Yj0xMjU1MHxwYz1VU0R8cmFpZD1iZWY1ODdiMS0yODc5LTQ1MmEtOGFjMy1kMWY1NzAyNzIzNmJ8YWlkPTUzNzUxODY4N3x0PTN8YXM9NzIweDQwNnxsaWQ9NTM3MjgxMzI2fG9pZD01MzcxODQxMTl8cD0wfHByPTB8YXRiPTB8YWR2PTEyNjEyMHxhYz1VU0R8cG09UFJJQ0lORy5DUE18Ym09QlVZSU5HLk5PTkdVQVJBTlRFRUR8dXI9M1dZd2tRRmtXdg]]>
+                            </Tracking>
+
+                        </TrackingEvents>
+                        <VideoClicks>
+                            <ClickThrough>
+                                <![CDATA[http://ox-d.clickmena.com/v/1.0/rc?ts=1fHJpZD1kYmUyZDhhNi1lMGQwLTQ3MDEtYmI3Zi02MjM2NzkwOTA0Mjd8cnQ9MTQ0NDA0MjQ1NXxhdWlkPTUzNzIwOTE4MnxhdW09RE1JRC5MSU5FQVJWSURFT3xzaWQ9MTE2MDkzfHB1Yj0xMjU1MHxwYz1VU0R8cmFpZD1iZWY1ODdiMS0yODc5LTQ1MmEtOGFjMy1kMWY1NzAyNzIzNmJ8YWlkPTUzNzUxODY4N3x0PTN8YXM9NzIweDQwNnxsaWQ9NTM3MjgxMzI2fG9pZD01MzcxODQxMTl8cD0wfHByPTB8YXRiPTB8YWR2PTEyNjEyMHxhYz1VU0R8cG09UFJJQ0lORy5DUE18Ym09QlVZSU5HLk5PTkdVQVJBTlRFRUR8dXI9M1dZd2tRRmtXdg]]>
+                            </ClickThrough>
+
+                        </VideoClicks>
+                        <MediaFiles>
+                            <MediaFile id="537518687" delivery="streaming"
+                                       type="video/mp4" width="720"
+                                       height="406">
+                                <![CDATA[http://i.cdn.openx.com/5b8/5b83c6ad-4835-4b87-acc8-843a6ce84b2b/6b6/6b6e0efe02b94e26b01b1052e7709098.mp4]]>
+                            </MediaFile>
+                        </MediaFiles>
+                    </Linear>
+
+
+
+
+
+                </Creative>
+            </Creatives>
+        </InLine>
+    </Ad>
+</VAST>

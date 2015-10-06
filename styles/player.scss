@@ -1,0 +1,47 @@
+@import "videojs.css";
+
+$bigPlayButton: '../img/big-play-button.png';
+
+.video-js {
+  background-color: transparent;
+
+  .vjs-tech {
+    position: relative;
+    height: auto;
+  }
+
+  .vjs-big-play-button {
+    top: 50%;
+    left: 50%;
+    margin: -55px 0 0 -55px;
+    background-color: transparent;
+    border: none;
+    width: 111px;
+    height: 112px;
+    box-shadow: none;
+    background: url($bigPlayButton) center center no-repeat;
+
+    &:hover {
+      background-color: transparent;
+    }
+
+    &:focus {
+      background-color: transparent;
+      box-shadow: none;
+    }
+
+    &:before {
+      content: '';
+    }
+  }
+}
+
+.vjs-default-skin {
+  &:hover {
+    .vjs-big-play-button {
+      background-color: transparent;
+      box-shadow: none;
+    }
+  }
+}
+

@@ -16,7 +16,10 @@
   };
 
   var defaults = {
-    vastUrl: ''
+    vastUrl: '',
+    debug: false,
+    remainTxt: 'Ad will end for %d seconds',
+    skipTxt: 'Skip'
   };
 
   videojs.plugin('playerInit', function (options) {
@@ -44,7 +47,9 @@
     }
 
     // Related videos
-    player.diwaneeRelated(window.relatedVideos);
+    if(window.relatedVideos !== '') {
+      player.diwaneeRelated(window.relatedVideos);
+    }
 
     // GA
     if ((typeof _gaq !== 'undefined') || (typeof ga !== 'undefined')) {
@@ -59,9 +64,8 @@
     var custVars = ox_vars.setVars();
     var oxParms = custVars !== '' ? '/' + custVars : '';
 
-    //if(settings.vastUrl != '') {
     player.ads({
-      debug: true
+      debug: settings.debug
     });
 
     player.vast({
@@ -70,7 +74,6 @@
       remainTxt: settings.remainTxt,
       skipTxt: settings.skipTxt
     });
-    //}
 
     if ((/MSIE 9/).test(navigator.userAgent)) {
       player.width('100%');
@@ -120,11 +123,11 @@
 
     // V A S T   R E A D Y   O R   E M P T Y
     player.one("vast-ready", function (e) {
-      //autoplayHandler();
+      autoplayHandler();
     });
     // no preroll scenario
     player.one('adscanceled', function (e) {
-      //autoplayHandler();
+      autoplayHandler();
     });
 
     player.on('play', function () {
@@ -149,7 +152,7 @@
     });
 
     player.on('pause', function () {
-      console.log('pause');
+      //console.log('pause');
       player.bigPlayButton.show();
       if (!player.seeking()) {
         player.controlBar.hide();

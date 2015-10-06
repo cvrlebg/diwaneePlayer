@@ -1,0 +1,29 @@
+@import url(videojs.css);
+.video-js {
+  background-color: transparent; }
+  .video-js .vjs-tech {
+    position: relative;
+    height: auto; }
+  .video-js .vjs-big-play-button {
+    top: 50%;
+    left: 50%;
+    margin: -55px 0 0 -55px;
+    background-color: transparent;
+    border: none;
+    width: 111px;
+    height: 112px;
+    box-shadow: none;
+    background: url("../img/big-play-button.png") center center no-repeat; }
+    .video-js .vjs-big-play-button:hover {
+      background-color: transparent; }
+    .video-js .vjs-big-play-button:focus {
+      background-color: transparent;
+      box-shadow: none; }
+    .video-js .vjs-big-play-button:before {
+      content: ''; }
+
+.vjs-default-skin:hover .vjs-big-play-button {
+  background-color: transparent;
+  box-shadow: none; }
+
+/*# sourceMappingURL=player.css.map */
