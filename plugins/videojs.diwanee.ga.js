@@ -7,6 +7,7 @@
     var video = this.el();
 
     var prerollStarted = false;
+    var prerollEnd = false;
 
     var eventName = "Video";
     var eventLabel;
@@ -17,19 +18,21 @@
 
     // playing preroll
     player.on("vast-ready", function(e) {
+      prerollStarted = true;
       if (!player.paused()) {
         _gaq.push(['_trackEvent', eventName, 'startPreroll', eventLabel]);
       }
       else {
         player.one('play', function() {
           _gaq.push(['_trackEvent', eventName, 'startPreroll', eventLabel]);
-          prerollStarted = true;
         });
       }
     });
 
     player.on('adend', function(e) {
       _gaq.push(['_trackEvent', eventName, 'endPreroll', eventLabel]);
+      prerollStarted = false;
+      prerollEnd = true;
     });
 
     // playing / ending main video
@@ -69,8 +72,7 @@
       }
     });
     player.on('pause', function(e) {
-      if (!player.seeking()) {
-        console.log(e);
+      if (!player.seeking() && prerollEnd) {
         player.trigger('ga-pause');
         _gaq.push(['_trackEvent', eventName, 'pause', eventLabel]);
       }
