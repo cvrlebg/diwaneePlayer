@@ -58,7 +58,6 @@
     player.on('ga-start', function () {
       //console.log('ga-start');
       showRelated = function () {
-        console.log('show related');
         $(container).addClass('related');
       };
     });
@@ -66,7 +65,7 @@
       hideRelated();
     });
     player.on('ga-pause', function () {
-      console.log('ga-pause');
+      //console.log('ga-pause');
       showRelated();
     });
 
