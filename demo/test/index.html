@@ -3,18 +3,23 @@
 <head lang="en">
   <meta charset="UTF-8">
   <title>Diwanee HTML5 player</title>
+
   <link rel="stylesheet" href="/styles/player.css">
-  <link rel="stylesheet" href="/bower_components/diwanee-vjs-vast/videojs.vast.css">
-  <link rel="stylesheet" href="/bower_components/videojs-contrib-ads/src/videojs.ads.css">
-  <link rel="stylesheet" href="/plugins/related.videos/style/style.css">
-  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="/demo/style.css">
+  <link rel="stylesheet" href="/demo/test/js/html5vast.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+
 </head>
 <body>
   <div class="container">
 
-    <div class="holder">
-      <video id="dvjs_video_123" class="dvjs_video video-js vjs-default-skin" preload="auto" controls
-             poster="" title="" data-setup='{"nativeControlsForTouch": true}' width="100%" height="100%" data-entryid="1_lm0obtba">
+    <div class="holder dvjs_video">
+      <video id="dvjs_video_123" class="video-js vjs-default-skin" preload="auto" controls
+             poster="" title="" data-setup='{"nativeControlsForTouch": true}' width="100%" height="100%" data-entryid="1_lm0obtba"
+        >
 
         <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that
           <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
@@ -33,31 +38,42 @@
     </div>-->
   </div>
 
-  <script>
-    var _gaq = _gaq || {};
-    _gaq = {
-      push: function(args) {
-        console.log(args);
-      }
-    }
-  </script>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="/libs/kaltura/mwEmbedLoader.js" type="text/javascript"></script>
   <script src="/libs/kaltura/kWidget.getSources.js"></script>
   <script src="/libs/kaltura/kaltura.sources.js"></script>
 
-  <script src="/bower_components/video.js/dist/video-js/video.js"></script>
-  <script src="/bower_components/diwanee-vast-client-js/vast-client.js"></script>
-  <script src="/bower_components/videojs-contrib-ads/src/videojs.ads.js"></script>
-  <script src="/bower_components/diwanee-vjs-vast/videojs.vast.js"></script>
   <script src="/libs/base64/base64.min.js"></script>
-
   <script src="/libs/vast/vast.vars.js"></script>
-  <script src="/plugins/videojs.diwanee.ga.js"></script>
+  <script src="/demo/test/js/html5vast.js"></script>
+
+  <script>
+    $(function () {
+
+      var _gaq = _gaq || {};
+      _gaq = {
+        push: function(args) {
+          console.log(args);
+        }
+      }
+
+      $('.dvjs_video').each(function(i, o) {
+          kalturaSrc.partnerId = 676152;
+          kalturaSrc.getSource(o);
+      });
+
+
+
+
+    });
+  </script>
+
+
+
+
+  <!--<script src="/plugins/videojs.diwanee.ga.js"></script>
   <script src="/plugins/related.videos/videojs.diwanee.related.js"></script>
   <script src="/videojs.diwanee.init.js"></script>
-  <script src="/demo/vjs.config.js"></script>
+  <script src="/demo/vjs.config.js"></script>-->
 
   <script>
     window.relatedVideos = [

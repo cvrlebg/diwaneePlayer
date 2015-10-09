@@ -130,6 +130,19 @@
       autoplayHandler();
     });
 
+    player.one('adend', function() {
+      console.log('adend');
+      if((/MSIE 9.0/).test(navigator.userAgent)) {
+        var src = $('<source />');
+        src.attr('src', window.originSrc);
+        src.attr('type', 'video/mp4');
+        console.log(src);
+        $('#dvjs_video_123_html5_api').append(src);
+
+        player.load();
+      }
+    });
+
     player.on('play', function () {
       //console.log('play');
       clearTimeout(autoplayTimeout);

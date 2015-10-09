@@ -32,16 +32,32 @@ var kalturaSrc = {
           player.attr('title', data.name);
           $('.video_title').html(data.name);
 
-          videoData.forEach(function (k, v) {
-            if (k.type === 'video/h264' && (/(a.mp4)/).test(k.src) && !k.isOriginal) {
-              var src = $('<source />');
-              src.attr('src', k.src);
-              src.attr('type', k.type.replace('video/h264', 'video/mp4'));
-              player.append(src);
-            }
-          });
+
+          if((/MSIE 9.0/).test(navigator.userAgent)) {
+            videoData.forEach(function (k, v) {
+              if (k.type === 'video/h264' && (/(a.mp4)/).test(k.src) && !k.isOriginal) {
+                player.attr('src', k.src);
+                window.originSrc = k.src;
+                return;
+              }
+            });
+          } else {
+            videoData.forEach(function (k, v) {
+              if (k.type === 'video/h264' && (/(a.mp4)/).test(k.src) && !k.isOriginal) {
+                var src = $('<source />');
+                src.attr('src', k.src);
+                src.attr('type', k.type.replace('video/h264', 'video/mp4'));
+                player.append(src);
+              }
+            });
+          }
+
 
         });
+
+        /*html5vast("dvjs_video_123", '/vast.xml',{ //http://192.168.1.112
+          ad_caption: 'Advertisement'
+        });*/
       }
     });
   }

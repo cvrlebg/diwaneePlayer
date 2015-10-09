@@ -6,7 +6,7 @@ $(function () {
       var player = this;
       var options = {
         vastUrl: '/vast.xml',
-        //vastUrl: 'http://192.168.1.126/vast.xml',
+        //vastUrl: 'http://diwanee-video.dev/vast.xml',
         debug: true,
         remainTxt: 'تخطي الإعلان في %d',
         skipTxt: 'تخطي الإعل'
