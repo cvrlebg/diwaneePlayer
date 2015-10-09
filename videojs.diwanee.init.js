@@ -77,7 +77,7 @@
 
     if ((/MSIE 9/).test(navigator.userAgent)) {
       player.width('100%');
-      player.setPreload('auto');
+      //player.setPreload('auto');
       var vWidth = player.width();
     } else {
       var vWidth = $('.' + className).width();
@@ -87,7 +87,7 @@
 
     // Player events
     player.on('loadstart', function () {
-      //console.log('loadstart');
+      console.log('loadstart');
     });
 
     player.one('loadstart', function () {
@@ -95,11 +95,11 @@
     });
 
     player.on('loadeddata', function () {
-      //console.log('loadeddata');
+      console.log('loadeddata');
     });
 
     player.on('loadedmetadata', function () {
-      //console.log('loadedmetadata);
+      console.log('loadedmetadata');
     });
 
     var autoplayTimeout = null;
@@ -176,6 +176,11 @@
       //console.log('adsclick');
       player.bigPlayButton.show();
       player.pause();
+    });
+
+    player.on('durationchange', function() {
+      console.log('durationchange');
+      console.log(player.currentSrc());
     });
 
   });

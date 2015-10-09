@@ -18,8 +18,8 @@
   "license": "MIT",
   "dependencies": {
     "video.js": "4.12.15",
-    "diwanee-vjs-vast": "https://github.com/cvrlebg/videojs-vast-plugin.git#83e0cd5de72693400f1d2d6fba4935ea52fad3c2",
-    "vast-client-js": "1.3.4",
+    "diwanee-vjs-vast": "https://github.com/cvrlebg/videojs-vast-plugin.git#6ee2734f7c4af4fe28a9268f55c054d193d00666",
+    "diwanee-vast-client-js": "https://github.com/cvrlebg/vast-client-js.git#381eac0acd42fad934d3ff97dddda2c73ac49b35",
     "videojs-contrib-ads": "2.0.0"
   }
 }
