@@ -130,17 +130,12 @@
       autoplayHandler();
     });
 
-    player.one('adend', function() {
+    // fix for ie9 - doesnt start video content after preroll
+    player.one('adend', function(e) {
       console.log('adend');
-      if((/MSIE 9.0/).test(navigator.userAgent)) {
-        var src = $('<source />');
-        src.attr('src', window.originSrc);
-        src.attr('type', 'video/mp4');
-        console.log(src);
-        $('#dvjs_video_123_html5_api').append(src);
-
-        player.load();
-      }
+      player.on('durationchange', function() {
+        player.play();
+      });
     });
 
     player.on('play', function () {
@@ -189,11 +184,6 @@
       //console.log('adsclick');
       player.bigPlayButton.show();
       player.pause();
-    });
-
-    player.on('durationchange', function() {
-      console.log('durationchange');
-      console.log(player.currentSrc());
     });
 
   });
