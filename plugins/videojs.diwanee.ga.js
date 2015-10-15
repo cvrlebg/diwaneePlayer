@@ -52,7 +52,6 @@
 
     // playing / ending main video
     player.on("contentplay", function(e) {
-      //console.log(e);
       //console.log('contentplay');
       procentBeaconEnabled = true;
       prerollEnd = true;
@@ -86,7 +85,7 @@
 
     player.on('pause', function(e) {
       //console.log('pause');
-      if (!player.seeking() && prerollEnd) {
+      if (!player.seeking() && prerollEnd && !window.startPause) {
         player.trigger('ga-pause');
         _gaq.push(['_trackEvent', eventName, 'pause', eventLabel]);
       }

@@ -32,6 +32,7 @@
     var player = this;
     var classes = player.el().className.split(/\s+/);
     var className = classes[0];
+    window.startPause = false;
 
     // due to buggy  behavior  fullscreenApi disabled on Android Tablets in Chrome
     if ($('html').hasClass('ua-visitor-device-tablet') && $('html').hasClass('ua-os-name-android') && $('html').hasClass('ua-browser-name-chrome')) {
@@ -95,11 +96,11 @@
     });
 
     player.on('loadeddata', function () {
-      console.log('loadeddata');
+      //console.log('loadeddata');
     });
 
     player.on('loadedmetadata', function () {
-      console.log('loadedmetadata');
+      //console.log('loadedmetadata');
     });
 
     var autoplayTimeout = null;
@@ -132,10 +133,20 @@
 
     // fix for ie9 - doesnt start video content after preroll
     player.one('adend', function(e) {
-      console.log('adend');
-      player.on('durationchange', function() {
-        player.play();
-      });
+
+      if((/MSIE 9.0/).test(navigator.userAgent)) {
+        //console.log('adend');
+        player.on('durationchange', function() {
+          console.log('adend -> durationchange');
+          player.on('loadeddata', function(e) {
+            console.log('adend -> loadedmetadata');
+            window.startPause = true;
+            player.pause();
+            player.play();
+          });
+        });
+      }
+
     });
 
     player.on('play', function () {
