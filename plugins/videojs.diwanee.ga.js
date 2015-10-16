@@ -85,7 +85,7 @@
 
     player.on('pause', function(e) {
       //console.log('pause');
-      if (!player.seeking() && prerollEnd && !window.startPause) {
+      if (!player.seeking() && prerollEnd) {
         player.trigger('ga-pause');
         _gaq.push(['_trackEvent', eventName, 'pause', eventLabel]);
       }

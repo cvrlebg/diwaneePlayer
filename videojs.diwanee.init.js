@@ -76,9 +76,9 @@
       skipTxt: settings.skipTxt
     });
 
-    if ((/MSIE 9/).test(navigator.userAgent)) {
+    if ((/MSIE 9.0/).test(navigator.userAgent)) {
       player.width('100%');
-      //player.setPreload('auto');
+      //player.preload('auto');
       var vWidth = player.width();
     } else {
       var vWidth = $('.' + className).width();
@@ -129,24 +129,6 @@
     // no preroll scenario
     player.one('adscanceled', function (e) {
       autoplayHandler();
-    });
-
-    // fix for ie9 - doesnt start video content after preroll
-    player.one('adend', function(e) {
-
-      if((/MSIE 9.0/).test(navigator.userAgent)) {
-        //console.log('adend');
-        player.on('durationchange', function() {
-          console.log('adend -> durationchange');
-          player.on('loadeddata', function(e) {
-            console.log('adend -> loadedmetadata');
-            window.startPause = true;
-            player.pause();
-            player.play();
-          });
-        });
-      }
-
     });
 
     player.on('play', function () {
