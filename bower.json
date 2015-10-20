@@ -21,5 +21,8 @@
     "diwanee-vjs-vast": "https://github.com/cvrlebg/videojs-vast-plugin.git#969d32487a6960b09c096ebb4a01bb08470daa0a",
     "diwanee-vast-client-js": "https://github.com/cvrlebg/vast-client-js.git#381eac0acd42fad934d3ff97dddda2c73ac49b35",
     "videojs-contrib-ads": "2.0.0"
+  },
+  "devDependencies": {
+    "ua-parser-js": "*"
   }
 }

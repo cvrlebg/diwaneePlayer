@@ -14,8 +14,11 @@
   float: left;
 }
 
-
 .dvjs_video {
   width: 100%;
   height: 100%;
+}
+
+.ua-parser-info {
+  margin-top: 20px;
 }

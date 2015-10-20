@@ -7,7 +7,7 @@ $(function () {
       var options = {
         vastUrl: '/vast.xml',
         //vastUrl: 'http://diwanee-video.dev/vast.xml',
-        debug: true,
+        debug: false,
         //remainTxt: 'تخطي الإعلان في %d',
         remainTxt: 'Video will skipped for %d',
         skipTxt: 'تخطي الإعل'

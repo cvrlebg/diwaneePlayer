@@ -74,7 +74,7 @@
                             <MediaFile id="537518687" delivery="streaming"
                                        type="video/mp4" width="720"
                                        height="406">
-                                <![CDATA[http://i.cdn.openx.com/5b8/5b83c6ad-4835-4b87-acc8-843a6ce84b2b/6b6/6b6e0efe02b94e26b01b1052e7709098.mp4]]>
+                                <![CDATA[http://192.168.0.179/demo/preroll.mp4]]>
                             </MediaFile>
                         </MediaFiles>
                     </Linear>

@@ -88,7 +88,7 @@
 
     // Player events
     player.on('loadstart', function () {
-      console.log('loadstart');
+      //console.log('loadstart');
     });
 
     player.one('loadstart', function () {
