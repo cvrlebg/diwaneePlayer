@@ -8,8 +8,8 @@ $(function () {
         vastUrl: '/vast.xml',
         //vastUrl: 'http://diwanee-video.dev/vast.xml',
         debug: false,
-        //remainTxt: 'تخطي الإعلان في %d',
-        remainTxt: 'Video will skipped for %d',
+        remainTxt: 'تخطي الإعلان في %d',
+        //remainTxt: 'Video will skipped for %d',
         skipTxt: 'تخطي الإعل'
       };
 

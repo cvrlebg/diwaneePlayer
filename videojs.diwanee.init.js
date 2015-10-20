@@ -32,7 +32,6 @@
     var player = this;
     var classes = player.el().className.split(/\s+/);
     var className = classes[0];
-    window.startPause = false;
 
     // due to buggy  behavior  fullscreenApi disabled on Android Tablets in Chrome
     if ($('html').hasClass('ua-visitor-device-tablet') && $('html').hasClass('ua-os-name-android') && $('html').hasClass('ua-browser-name-chrome')) {

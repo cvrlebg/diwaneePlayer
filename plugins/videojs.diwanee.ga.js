@@ -70,9 +70,10 @@
     });
 
     // play / stop
-    var ended = false; // fix for replay seak
+    var ended = false; // fix for replay seek
 
     player.on('play', function(e) {
+      //console.log('play');
       if (!player.seeking() || ended) {
         //console.log(e);
         ended = false;
@@ -87,7 +88,10 @@
       //console.log('pause');
       if (!player.seeking() && prerollEnd) {
         player.trigger('ga-pause');
-        _gaq.push(['_trackEvent', eventName, 'pause', eventLabel]);
+        // fix for ie9 - after preroll end, player fire event pause then play
+        if(player.currentTime() > 0) {
+          _gaq.push(['_trackEvent', eventName, 'pause', eventLabel]);
+        }
       }
     });
 
